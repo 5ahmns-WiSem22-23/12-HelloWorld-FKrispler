@@ -4,63 +4,63 @@ using UnityEngine;
 
 public class HelloWorldMethoden : MonoBehaviour
 {
-    private int startValue = 0;
-    private int startValue3= 0;
+    private int currentIncrementValue = 0;
+    private int currentIncrementValue2 = 0;
 
-    private int statValue4 = 10;
+    private int currentDecrementValue = 10;
 
     //5 return
 
-    private int startValue5 = 20;
+    private int getDifference = 20;
 
     void Start()
     {
         Debug.Log("Hello Methode");
-        Debug.Log("before Start" + startValue);
-        InciByOne();
-        Debug.Log("afer start Value" + startValue);
-        
+        Debug.Log("before Start" + currentIncrementValue);
+        IncrementByOne();
+        Debug.Log("afer start Value" + currentIncrementValue);
+
 
         //3
 
-        Debug.Log("before startValue3" + startValue3);
-        InciByX(Random.Range(1, 10));
-        Debug.Log("after startValue3" + startValue3);
+        Debug.Log("before currentValue3" + currentIncrementValue2);
+        IncrementByValue(Random.Range(1, 10));
+        Debug.Log("after currentValue3" + currentIncrementValue2);
 
 
         //4
-        Debug.Log("before startValue4" + statValue4);
-        DecriByOne(statValue4);
-        Debug.Log("after StartValue4" + statValue4);
+        Debug.Log("before currentValue4" + currentDecrementValue);
+        DecrementByOne(currentDecrementValue);
+        Debug.Log("after currentValue4" + currentDecrementValue);
 
 
         //5
 
-        Debug.Log("before startValue5" + startValue5);
-        DecriByX(startValue5, 2);
-        Debug.Log("after StartValue5" + startValue5);
-        
+        Debug.Log("before currentValue5" + getDifference);
+        DecrementByValue(getDifference, 2);
+        Debug.Log("after currentValue5" + getDifference);
+
     }
 
-    private void InciByOne()
+    private void IncrementByOne()
     {
-        startValue++;
+        currentIncrementValue++;
     }
 
-    private void InciByX(int valToAdd)
+    private void IncrementByValue(int increment)
     {
-        startValue3 += valToAdd;
+        currentIncrementValue2 += increment;
     }
 
-    private void DecriByOne(int val)
+    private void DecrementByOne(int currentValue)
     {
-        val++;
-        Debug.Log("val" + val);
+        currentValue--;
+        Debug.Log("val" + currentValue);
     }
 
-    private int DecriByX(int start, int valToSub)
+    private int DecrementByValue(int start, int decrement)
     {
-        return start - valToSub;
+        return start - decrement;
 
     }
 }
